@@ -1,5 +1,3 @@
-from tkinter.messagebox import YES
-from unicodedata import name
 import pandas as pd
 import requests, json
 import numpy as np
