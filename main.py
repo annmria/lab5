@@ -58,6 +58,7 @@ data = pd.read_csv('Pokemon.csv')
 # print(dataTable)
 
 # konverterar csv till excel / skapar tabell
+# kräver extension Excel Viewer
 wb = Workbook()
 ws = wb.active
 with open('Pokemon.csv', 'r') as f:
