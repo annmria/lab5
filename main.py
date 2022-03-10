@@ -16,8 +16,9 @@ data = pd.read_csv('Pokemon.csv')
 # test = data.groupby('Name')[['Legendary']].head()
 # print(test)
 
+# medelvärde
 # Total,HP,Attack,Defense,Sp. Atk,Sp. Def,Speed
-# attack_mean = data['Attack'].head()
+# attack_mean = data['Attack'].head() -.mean()
 
 # Attack = 'Attack'
 
@@ -42,8 +43,15 @@ data = pd.read_csv('Pokemon.csv')
 # scat.set_ylabel('Attack')
 # plt.show()
 
-fig, scat = plt.subplots(figsize=(10, 6))
-scat.scatter(data['Generation'], data['Attack'])
-scat.set_xlabel('Generation')
-scat.set_ylabel('Attack')
-plt.show()
+# bäst resultat med scatter för vårat dataset. histogram kan bli missvisande med vårat dataset.
+# fig, scat = plt.subplots(figsize=(10, 6))
+# scat.scatter(data['Generation'], data['Attack'])
+# scat.set_xlabel('Generation')
+# scat.set_ylabel('Attack')
+# plt.show()
+
+# sorterar efter ex hp, namn... (lägst till högst, a - z)
+# visar endast angivna
+# ta bort values så visas allt
+# dataTable = pd.pivot_table(data, index=["Name"], values=["HP"])
+# print(dataTable)
