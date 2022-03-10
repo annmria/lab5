@@ -57,6 +57,7 @@ data = pd.read_csv('Pokemon.csv')
 # dataTable = pd.pivot_table(data, index=["Name"], values=["HP"])
 # print(dataTable)
 
+# konverterar csv till excel / skapar tabell
 wb = Workbook()
 ws = wb.active
 with open('Pokemon.csv', 'r') as f:
