@@ -5,6 +5,7 @@ from numpy import percentile
 import matplotlib.pyplot as plt
 import csv
 import seaborn as sns
+from openpyxl import Workbook
 
 data = pd.read_csv('Pokemon.csv')
 # print(data)
@@ -55,3 +56,10 @@ data = pd.read_csv('Pokemon.csv')
 # ta bort values så visas allt
 # dataTable = pd.pivot_table(data, index=["Name"], values=["HP"])
 # print(dataTable)
+
+wb = Workbook()
+ws = wb.active
+with open('Pokemon.csv', 'r') as f:
+    for row in csv.reader(f):
+        ws.append(row)
+wb.save('Pokemon.xlsx')
