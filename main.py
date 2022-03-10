@@ -21,16 +21,6 @@ data = pd.read_csv('Pokemon.csv')
 # Total,HP,Attack,Defense,Sp. Atk,Sp. Def,Speed
 # attack_mean = data['Attack'].head() -.mean()
 
-# Attack = 'Attack'
-
-# def spec_pok(Attack):
-#     if Attack >= 80:
-#         return 'Good'
-#     elif Attack == 50:
-#         return 'cool'
-#     else:
-#         return 'trash bro'
-
 # visar en graf med alla stats
 # data.plot(title='Pokemon attack', kind='line')
 # plt.ylabel('#') # label = namnet på axeln
@@ -65,3 +55,5 @@ with open('Pokemon.csv', 'r') as f:
     for row in csv.reader(f):
         ws.append(row)
 wb.save('Pokemon.xlsx')
+
+# söka på en specifik pokemon och få fram all info om den
