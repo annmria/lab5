@@ -45,8 +45,8 @@ data = pd.read_csv('Pokemon.csv')
 # sorterar efter ex hp, namn... (lägst till högst, a - z)
 # visar endast angivna
 # ta bort values så visas allt
-# dataTable = pd.pivot_table(data, index=["Name"], values=["HP"])
-# print(dataTable)
+dataTable = pd.pivot_table(data, index=["Name"], values=["HP", "Total"])
+print(dataTable)
 
 # konverterar csv till excel / skapar tabell
 # kräver extension Excel Viewer
@@ -80,4 +80,4 @@ data = pd.read_csv('Pokemon.csv')
 #         print("Programmet avslutas")
 #         break
 
-print(data)
+#print(data)
