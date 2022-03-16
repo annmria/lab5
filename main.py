@@ -40,9 +40,9 @@ except:
 
 # bäst resultat med scatter för vårat dataset. histogram kan bli missvisande med vårat dataset.
 # fig, scat = plt.subplots(figsize=(10, 6))
-# scat.scatter(data['Generation'], data['Attack'])
+# scat.scatter(data['Generation'], data['HP'])
 # scat.set_xlabel('Generation')
-# scat.set_ylabel('Attack')
+# scat.set_ylabel('HP')
 # plt.show()
 
 # sorterar efter ex hp, namn... (lägst till högst, a - z)
@@ -70,8 +70,8 @@ while [1, 2]:
         userPoke = input()
         data_indexed = pd.read_csv('Pokemon.csv', index_col="Name")
         try:
-            test = data_indexed.iloc[[userPoke]][['Type 1','Type 2','Total','HP', 'Attack', 'Defense', 'Sp. Atk', 'Sp. Def', 'Speed', 'Generation', 'Legendary']] # söker på index
-            print(test)
+            pokemon = data_indexed.iloc[[userPoke]][['Type 1','Type 2','Total','HP', 'Attack', 'Defense', 'Sp. Atk', 'Sp. Def', 'Speed', 'Generation', 'Legendary']] # söker på index
+            print(pokemon)
         except:
             KeyError
             print("Du skev fel prova igen.")
@@ -81,8 +81,8 @@ while [1, 2]:
         userPoke = input()
         data_indexed = pd.read_csv('Pokemon.csv', index_col="Name")
         try:
-            test = data_indexed.loc[[userPoke]][['Type 1','Type 2','Total','HP', 'Attack', 'Defense', 'Sp. Atk', 'Sp. Def', 'Speed', 'Generation', 'Legendary']] # söker på namn
-            print(test)
+            pokemon = data_indexed.loc[[userPoke]][['Type 1','Type 2','Total','HP', 'Attack', 'Defense', 'Sp. Atk', 'Sp. Def', 'Speed', 'Generation', 'Legendary']] # söker på namn
+            print(pokemon)
         except:
             KeyError
             print("Du skev fel prova igen. Kolla stavning och ha stor bokstav först.")
