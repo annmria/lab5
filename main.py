@@ -22,8 +22,8 @@ except:
 
 # medelvärde
 # Total,HP,Attack,Defense,Sp. Atk,Sp. Def,Speed
-# attack_mean = data['Attack'].tail().mean()
-# print (attack_mean)
+attack_mean = data['Attack'].tail().mean()
+print (attack_mean)
 
 #visar en graf med alla stats
 #data.plot(title='Pokemon stats', kind='line')
