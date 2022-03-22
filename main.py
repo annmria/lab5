@@ -45,6 +45,13 @@ print (attack_mean)
 # scat.set_ylabel('HP')
 # plt.show()
 
+# sammanhang hp/attack
+# fig, scat = plt.subplots(figsize=(10, 6))
+# scat.scatter(data['Attack'], data['HP'])
+# scat.set_xlabel('Attack')
+# scat.set_ylabel('HP')
+# plt.show()
+
 # sorterar efter ex hp, namn... (lägst till högst, a - z)
 # visar endast angivna
 # ta bort values så visas allt
